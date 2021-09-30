@@ -1,6 +1,7 @@
 
 import React from 'react'
 import ButtonsBottom from '../components/ButtonsBottom';
+import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 
 export const Project1 = () => {
@@ -8,6 +9,7 @@ export const Project1 = () => {
         <main>
             <div className="project">
                 <Navigation />
+                <Logo />
                 Projet 1
                 <ButtonsBottom left={'/'} right={'/projet-2'} />
             </div>
@@ -20,6 +22,7 @@ export const Project2 = () => {
         <main>
             <div className="project">
                 <Navigation />
+                <Logo />
                 Projet 2
                 <ButtonsBottom left={'/projet-1'} right={'/projet-3'} />
             </div>
@@ -31,6 +34,7 @@ export const Project3 = () => {
         <main>
             <div className="project">
                 <Navigation />
+                <Logo />
                 Projet 3
                 <ButtonsBottom left={'/projet-2'} right={'/projet-4'} />
             </div>
@@ -43,6 +47,7 @@ export const Project4 = () => {
         <main>
             <div className="project">
                 <Navigation />
+                <Logo />
                 Projet 4
                 <ButtonsBottom left={'/projet-3'} right={'/contact'} />
             </div>
