@@ -2,6 +2,7 @@
 import React from 'react'
 import ButtonsBottom from '../components/ButtonsBottom';
 import Logo from '../components/Logo';
+import Mouse from '../components/Mouse';
 import Navigation from '../components/Navigation';
 import Projet from '../components/Projet';
 
@@ -9,6 +10,7 @@ export const Project1 = () => {
     return (
         <main>
             <div className="project">
+                <Mouse />
                 <Navigation />
                 <Logo />
                 <Projet projectNumber={0} />
@@ -23,6 +25,7 @@ export const Project2 = () => {
     return (
         <main>
             <div className="project">
+                <Mouse />
                 <Navigation />
                 <Logo />
                 <Projet projectNumber={1} />
@@ -35,6 +38,7 @@ export const Project3 = () => {
     return (
         <main>
             <div className="project">
+                <Mouse />
                 <Navigation />
                 <Logo />
                 <Projet projectNumber={2} />
@@ -48,6 +52,7 @@ export const Project4 = () => {
     return (
         <main>
             <div className="project">
+                <Mouse />
                 <Navigation />
                 <Logo />
                 <Projet projectNumber={3} />
