@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <SocialeNetwork />
             </div>           
-            <ButtonsBottom/>
+            <ButtonsBottom left={'/projet-4'}/>
             </div>
         </main>
     )
