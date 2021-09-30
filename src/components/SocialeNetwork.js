@@ -12,7 +12,8 @@ const SocialeNetwork = () => {
 
                 link.style.transform = `translate(${attrX}px, ${attrY}px` ;
             })
-        // pour que les icones retournes à leurs place une fois que la souris sort
+        // pour que les icones retournes à leurs place une fois que la souris n'est plus dessus
+    
             link.addEventListener('mouseleave', () => {
                 link.style.transform = '';
             })
