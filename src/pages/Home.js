@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonsBottom from '../components/ButtonsBottom';
 import DynamicText from '../components/DynamicText';
 import Navigation from '../components/Navigation';
 import SocialeNetwork from '../components/SocialeNetwork.js';
@@ -16,6 +17,7 @@ const Home = () => {
                 <h2><DynamicText /></h2>
                 </div>
             </div>
+            <ButtonsBottom  right={"/projet-1"}/>
             </div>
         </div>
     )

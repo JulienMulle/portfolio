@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 const DynamicText = () => {
 // utilisation d'un hook
-    
+    //je stock dans un tableau les mots qui vont s'animer
         let array = ["simple","clear", "smart", "strong"];
         //on va d'abord lire les mots, 
         let wordIndex=0;
@@ -10,9 +10,9 @@ const DynamicText = () => {
         let letterIndex=0;
 
         useEffect(() => {
-
+//creation des lettres qui ne reste que 2sec dans l'element target qui va ce placer dans le span id=text target
             const target = document.getElementById("text-target");
-//creation des lettres qui ne reste que 2sec
+
             const createLetter = () => {
               const letter = document.createElement("span");
               target.appendChild(letter);
