@@ -6,6 +6,11 @@ const Projet = (props) => {
      const [currentProject] = useState(projectsData)
      const project = currentProject[props.projectNumber]
      
+//pour le background, un cercle pop de façon aléatoire en bas à droite. 
+    let left = Math.floor(Math.random()*200+700) + "px";
+    let top = Math.floor(Math.random()*200+150) + "px";
+    let transform = "scale(" + (Math.random() + 0.7) + ")";
+
     return (
         <div className="project-main">
             <div className="project-content">
@@ -32,6 +37,7 @@ const Projet = (props) => {
                     
                 </div>
             </div>
+            <span className="random-circle" style={{left, top, transform}}></span>
         </div>
     )
 }
