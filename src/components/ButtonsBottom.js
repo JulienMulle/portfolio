@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const ButtonsBottom = (props) => {
-    console.log(props)
+    
     return (
         <div className="scroll-bottom">
             <div className="sb-main">

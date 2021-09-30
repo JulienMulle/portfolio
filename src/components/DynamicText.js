@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 const DynamicText = () => {
 // utilisation d'un hook
     //je stock dans un tableau les mots qui vont s'animer
-        let array = ["simple","clear", "smart", "strong"];
+        let array = ["react","redux", "sass", "git"];
         //on va d'abord lire les mots, 
         let wordIndex=0;
         // et ensuite les lettres contenu dans array
@@ -51,7 +51,7 @@ const DynamicText = () => {
       
     return (
         <span className="dynamic-text">
-            <span className="simply">simply</span>
+            <span className="simply">skills</span>
             <span id="text-target"></span>
         </span>
     )
