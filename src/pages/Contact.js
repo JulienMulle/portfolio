@@ -1,6 +1,7 @@
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import ButtonsBottom from '../components/ButtonsBottom';
+import ContactForm from '../components/ContactForm';
 import Logo from '../components/Logo';
 import Mouse from '../components/Mouse';
 import Navigation from '../components/Navigation';
@@ -14,6 +15,7 @@ const Contact = () => {
             <div className="contact">
             <Navigation/>
             <Logo />
+            <ContactForm />
             <div className="contact-infos">
                 <div className="address">
                     <div className="content">
@@ -53,7 +55,7 @@ const Contact = () => {
                 </div>
                 <SocialeNetwork />
             </div>           
-            <ButtonsBottom  left={'/projet-4'} />
+                <ButtonsBottom  left={'/projet-4'} />
             </div>
         </main>
     )
