@@ -15,7 +15,7 @@ const Contact = () => {
             <Navigation/>
             <Logo />
             <div className="contact-infos">
-                <div className="adress">
+                <div className="address">
                     <div className="content">
                         <h4>adresse</h4>
                         <p> 12 rue du code</p>
@@ -26,7 +26,7 @@ const Contact = () => {
                 <div className="phone">
                     <div className="content">
                         <h4>téléphone</h4>
-                        <CopyToClipboard text="0606060606" className="hover">
+                        <CopyToClipboard text="0619408776" className="hover">
                             <p style={{cursor: 'pointer'}} 
                             className="clipboard" 
                             onClick={() => {
@@ -36,24 +36,24 @@ const Contact = () => {
                         </CopyToClipboard>
                     </div>
                 </div>
-
                 <div className="email">
-                    <div className="content">
-                        <h4>email</h4>
-                        <CopyToClipboard text="julienmulle@gmail.com"
-                        className="hover">
-                            <p style={{cursor: 'pointer'}} 
-                            className="clipboard" 
-                            onClick={() => {
-                                alert(`l'Email est copié !`);
-                            }}> 
-                            julienmulle@gmail.com</p>
+                <div className="content">
+                    <h4>email</h4>
+                        <CopyToClipboard text="julienmulle@gmail.com" className="hover">
+                        <p
+                        style={{cursor: 'pointer'}}
+                        className="clipboard"
+                        onClick={() => {
+                        alert("Email copié !");
+                        }}>
+                        julienmulle@gmail.com
+                        </p>
                         </CopyToClipboard>
-                    </div>
+                </div>
                 </div>
                 <SocialeNetwork />
             </div>           
-            <ButtonsBottom left={'/projet-4'}/>
+            <ButtonsBottom  left={'/projet-4'} />
             </div>
         </main>
     )

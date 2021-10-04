@@ -24,27 +24,21 @@ const SocialeNetwork = () => {
     return (
         <div className="social-network">
             <ul className="content">
-                <a href="https://www.facebook.com" 
+                <a href="www.linkedin.com/in/julien-mulle" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover"
                 onMouseOver={anim}>
-                    <li><i className="fab fa-facebook-f"></i></li>
+                   <li><i class="fab fa-linkedin"></i></li>
                 </a>
-                <a href="https://www.twitter.com" 
+                <a href="https://github.com/Julien-Mulle" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover"
                 onMouseOver={anim}>
-                    <li><i className="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-github"></i></li>
                 </a>
-                <a href="https://www.instagram.com" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover"
-                onMouseOver={anim}>
-                    <li><i className="fab fa-instagram"></i></li>
-                </a>
+
             </ul>
         </div>
     )
