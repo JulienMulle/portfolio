@@ -3,6 +3,7 @@ import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import { Project1, Project2, Project3, Project4 } from './pages/Projects';
+import { AnimatePresence } from 'framer-motion';
  
  const App = () => {
 
@@ -20,7 +21,7 @@ import { Project1, Project2, Project3, Project4 } from './pages/Projects';
               history.push(after)
             }, 500);
 
-          } else if (e.wheelDeltaY > 0)  {
+          } else if (e.wheelDeltaY > 0) {
             setTimeout(()=>{
               history.push(before)
             }, 500);
@@ -63,6 +64,7 @@ import { Project1, Project2, Project3, Project4 } from './pages/Projects';
     }, [history]);
 
    return (
+     <AnimatePresence>
      <Switch location={location} key={location.pathname}>
        <Route exact path="/" component={Home}/>
        <Route exact path="/projet-1" component={Project1} />
@@ -72,6 +74,7 @@ import { Project1, Project2, Project3, Project4 } from './pages/Projects';
        <Route exact path="/contact" component={Contact} />
        <Redirect to path="/" /> 
      </Switch>
+     </AnimatePresence>
    )
  }
  
