@@ -4,13 +4,40 @@ import DynamicText from '../components/DynamicText';
 import Mouse from '../components/Mouse';
 import Navigation from '../components/Navigation';
 import SocialeNetwork from '../components/SocialeNetwork.js';
-
+import { motion } from 'framer-motion';
 
 const Home = () => {
+
+    // on va stocker tout les reglages de la page dans une const
+    const variants = {
+    //on demarre par la base
+        initial: {
+            opacity: 0,
+            transition: { duration: 0.5},
+            x: 100,
+        },
+    //quand le components arrive
+        visible:{
+            opacity:1,
+            x:0,
+        },
+    // quand le component s'en va
+        exit:{
+            opacity: 0,
+            transition: { duration:0.3},
+            x:-100
+        }
+    }
+
     return (
         <main>
             <Mouse />
-            <div className="home">           
+            <motion.div 
+            className="home"
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={variants}>           
             <Navigation />
             <SocialeNetwork />
             <div className="home-main">
@@ -20,7 +47,7 @@ const Home = () => {
                 </div>
             </div>
             <ButtonsBottom  right={"/projet-1"}/>
-            </div>
+            </motion.div>
         </main>
     )
 }
