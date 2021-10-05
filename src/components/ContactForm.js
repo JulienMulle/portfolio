@@ -96,7 +96,7 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form">
-      <h2>contactez-nous</h2>
+      <h2>contactez moi</h2>
       <div className="form-content">
         <input
           type="text"

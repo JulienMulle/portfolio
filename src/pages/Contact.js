@@ -48,13 +48,7 @@ const Contact = () => {
             <Logo />
             <ContactForm />
             <div className="contact-infos">
-                <div className="address">
-                    <div className="content">
-                        <h4>adresse</h4>
-                        <p> 12 rue du code</p>
-                        <p> 33000 Bordeaux</p>
-                    </div>
-                </div>
+                
 
                 <div className="phone">
                     <div className="content">
