@@ -6,13 +6,44 @@ import Logo from '../components/Logo';
 import Mouse from '../components/Mouse';
 import Navigation from '../components/Navigation';
 import SocialeNetwork from '../components/SocialeNetwork';
+import { motion } from 'framer-motion';
+
 
 
 const Contact = () => {
+
+        // on va stocker tout les reglages de la page dans une const
+        const variants = {
+            //on demarre par la base
+                initial: {
+                    opacity: 1,
+                    x: 0,
+                },
+           
+            // quand le component s'en va
+                exit:{
+                    opacity: 0,
+                    x: 300,
+                }
+            };
+
+            // parametrage de la transition en cubic bezier
+            const transition = {
+                ease: [0.03, 0.87, 0.73, 0.9],
+                duration: 0.6,
+            };
+
     return (
         <main>
             <Mouse />
-            <div className="contact">
+            <motion.div 
+            className="contact"
+            initial="exit"
+            animate="initial"
+            exit="exit"
+            variants={variants}
+            transition={transition}
+            >
             <Navigation/>
             <Logo />
             <ContactForm />
@@ -56,7 +87,7 @@ const Contact = () => {
                 <SocialeNetwork />
             </div>           
                 <ButtonsBottom  left={'/projet-4'} />
-            </div>
+            </motion.div>
         </main>
     )
 }
