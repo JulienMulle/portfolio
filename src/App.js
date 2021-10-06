@@ -30,7 +30,7 @@ import { AnimatePresence } from 'framer-motion';
       
         switch (window.location.href.toString()) {
           case url:
-            if (e.wheelDeltaY <0){
+            if (e.wheelDeltaY < 0){
               setTimeout(()=>{
                 history.push('projet-1')
               }, 500);     
@@ -49,7 +49,7 @@ import { AnimatePresence } from 'framer-motion';
             wheelRouter('contact', 'projet-3');
             break;
           case url +"contact":
-            if(e.wheelDeltaY >0){
+            if(e.wheelDeltaY > 0){
               setTimeout(()=>{
                 history.push('projet-4')
               }, 500);
@@ -72,7 +72,7 @@ import { AnimatePresence } from 'framer-motion';
        <Route exact path="/projet-3" component={Project3} />
        <Route exact path="/projet-4" component={Project4} />
        <Route exact path="/contact" component={Contact} />
-       <Redirect to path="/" /> 
+       <Redirect to="/" /> 
      </Switch>
      </AnimatePresence>
    )

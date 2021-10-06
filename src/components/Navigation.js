@@ -5,38 +5,40 @@ const Navigation = () => {
     return (
         <div className="navigation">
             <ul>
-                <NavLink to="/" exact className=" over" 
-                activeClassName="nav-active">
+                <NavLink to="/" exact activeClassName="nav-active" 
+                className=" hover" 
+                >
                     <li>Accueil</li>
                 </NavLink>
                 <li className="nav-portfolio">
                     Portfolio
                     <ul className="nav-projects">
-                        <NavLink to="/project-1" 
+                        <NavLink to="/projet-1" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>project 1</li>
+                            <li>projet 1</li>
                         </NavLink>
-                        <NavLink to="/project-2" 
+                        <NavLink to="/projet-2" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>project 2</li>
+                            <li>projet 2</li>
                         </NavLink>
-                        <NavLink to="/project-3" 
+                        <NavLink to="/projet-3" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>project 3</li>
+                            <li>projet 3</li>
                         </NavLink>
-                        <NavLink to="/project-4" 
+                        <NavLink to="/projet-4" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>project 4</li>
+                            <li>projet 4</li>
                         </NavLink>
                     </ul>
                 </li>
                 <NavLink to="/contact" 
-                exact className=" over" 
-                activeClassName="nav-active">
+                activeClassName="nav-active"
+                className=" hover" 
+                >
                     <li>Contact</li>
                 </NavLink>
             </ul>
