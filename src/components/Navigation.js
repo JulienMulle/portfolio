@@ -6,9 +6,12 @@ const Navigation = () => {
         <div className="navigation">
             <ul>
                 <NavLink to="/" exact activeClassName="nav-active" 
-                className=" hover" 
+                className="hover" 
                 >
                     <li>Accueil</li>
+                </NavLink>
+                <NavLink to="/Cv" exact activeClassName="nav-active" className="hover"> 
+                    <li>Cv</li>
                 </NavLink>
                 <li className="nav-portfolio">
                     Portfolio
@@ -37,7 +40,7 @@ const Navigation = () => {
                 </li>
                 <NavLink to="/contact" 
                 activeClassName="nav-active"
-                className=" hover" 
+                className="hover" 
                 >
                     <li>Contact</li>
                 </NavLink>

@@ -302,18 +302,5 @@
         transform: translateX(-50%);
       }
     }
-    .credits {
-      text-align: center;
-
-      @media screen and (max-width: 740px){
-        transform: translateY(20px);
-        font-size: .7rem;
-        margin-right: 1rem;
-        grid-area: f;
-      }
-      p {
-        font-size: 0.9rem;
-      }
-    }
   }
 }

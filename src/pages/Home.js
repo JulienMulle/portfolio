@@ -46,7 +46,7 @@ const Home = () => {
                 <h2><DynamicText /></h2>
                 </div>
             </div>
-            <ButtonsBottom  right={"/projet-1"}/>
+            <ButtonsBottom  right={"/Cv"}/>
             </motion.div>
         </main>
     )

@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import { Project1, Project2, Project3, Project4 } from './pages/Projects';
 import { AnimatePresence } from 'framer-motion';
+import Cv from './pages/Cv';
  
  const App = () => {
 
@@ -32,12 +33,15 @@ import { AnimatePresence } from 'framer-motion';
           case url:
             if (e.wheelDeltaY < 0){
               setTimeout(()=>{
-                history.push('projet-1')
+                history.push('Cv')
               }, 500);     
           }
             break;
+          case url + "cv" :
+            wheelRouter('projet-1','');
+            break;
           case url +"projet-1":
-            wheelRouter('projet-2', '');
+            wheelRouter('projet-2', 'Cv');
             break;
           case url +"projet-2":
              wheelRouter('projet-3', 'projet-1');
@@ -66,7 +70,8 @@ import { AnimatePresence } from 'framer-motion';
    return (
      <AnimatePresence>
      <Switch location={location} key={location.pathname}>
-       <Route exact path="/" component={Home}/>
+       <Route exact path="/" component={Home} />
+       <Route exact path="/Cv" component={Cv} />
        <Route exact path="/projet-1" component={Project1} />
        <Route exact path="/projet-2" component={Project2} />
        <Route exact path="/projet-3" component={Project3} />
