@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 
 
 
+
 const Contact = () => {
 
         // on va stocker tout les reglages de la page dans une const

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const SocialeNetwork = () => {
     //animation lorsque le souris passe dessus
     const anim = () =>{
@@ -24,6 +25,12 @@ const SocialeNetwork = () => {
     return (
         <div className="social-network">
             <ul className="content">
+                <a href='../assets/media/cv_JulienMulle_devFront.pdf' 
+                download="Cv Julien Mulle devFront"
+                className="hover"
+                onMouseOver={anim}>
+                    <li><i class="fas fa-portrait"></i></li>
+                </a>
                 <a href="www.linkedin.com/in/julien-mulle" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -38,7 +45,6 @@ const SocialeNetwork = () => {
                 onMouseOver={anim}>
                     <li><i className="fab fa-github"></i></li>
                 </a>
-
             </ul>
         </div>
     )
