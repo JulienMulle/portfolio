@@ -51,7 +51,7 @@ const DynamicText = () => {
       
     return (
         <span className="dynamic-text">
-            <span className="simply">Techno empl </span>
+            <span className="simply">Skills </span>
             <span id="text-target"></span>
         </span>
     )

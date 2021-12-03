@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -33,19 +34,56 @@ const ContactForm = () => {
     };
 
     if (name && isEmail() && message) {
-      const templateId = "template_wbudqkm";
-
       nameS.classList.remove("red");
       emailS.classList.remove("red");
       messageS.classList.remove("red");
 
-      sendFeedback(templateId, {
-        name,
-        company,
-        phone,
-        email,
-        message,
-      });
+      formMess.innerHTML = "Message en cours d'envoi...";
+      formMess.style.background = "#00c1ec";
+      formMess.style.opacity = "1";
+
+      // voir doc : https://www.emailjs.com/docs/examples/reactjs/
+      emailjs
+        .send(
+          // your service ID
+          "service_l89oj57",
+          // your template ID
+          "template_wbudqkm",
+          {
+            name,
+            company,
+            phone,
+            email,
+            message,
+          },
+          // your user ID (protégé par .env)
+          process.env.REACT_APP_EMAILJS_KEY
+        )
+        .then(
+          () => {
+            formMess.innerHTML =
+              "Message envoyé ! Je vous recontacterai dès que possible.";
+
+            document.getElementById("name").classList.remove("error");
+            document.getElementById("email").classList.remove("error");
+            document.getElementById("message").classList.remove("error");
+            setName("");
+            setCompany("");
+            setPhone("");
+            setEmail("");
+            setMessage("");
+
+            setTimeout(() => {
+              formMess.style.opacity = "0";
+            }, 5000);
+          },
+            (err) => {
+            console.log(err);
+            formMess.style.background = "rgb(253, 87, 87)";
+            formMess.innerHTML =
+              "Une erreur s'est produite, veuillez réessayer.";
+          }
+        );
     } else {
       formMess.innerHTML = "Merci de remplir correctement les champs requis *";
       formMess.style.background = "rgb(253, 87, 87)";
@@ -63,40 +101,9 @@ const ContactForm = () => {
     }
   };
 
-  const sendFeedback = (templateId, variables) => {
-    let formMess = document.querySelector(".form-message");
-
-    window.emailjs
-      .send("gmail", templateId, variables)
-      .then((res) => {
-        formMess.innerHTML =
-          "Message envoyé ! Nous vous recontacterons dès que possible.";
-        formMess.style.background = "#00c1ec";
-        formMess.style.opacity = "1";
-
-        document.getElementById("name").classList.remove("error");
-        document.getElementById("email").classList.remove("error");
-        document.getElementById("message").classList.remove("error");
-        setName("");
-        setCompany("");
-        setPhone("");
-        setEmail("");
-        setMessage("");
-
-        setTimeout(() => {
-          formMess.style.opacity = "0";
-        }, 5000);
-      })
-      .catch(
-        (err) =>
-          (formMess.innerHTML =
-            "Une erreur s'est produite, veuillez réessayer.")
-      );
-  };
-
   return (
     <form className="contact-form">
-      <h2>contactez moi</h2>
+      <h3>Contactez-moi</h3>
       <div className="form-content">
         <input
           type="text"
@@ -104,7 +111,7 @@ const ContactForm = () => {
           name="name"
           required
           onChange={(e) => setName(e.target.value)}
-          placeholder="nom *"
+          placeholder="Nom *"
           value={name}
         />
         <input
@@ -112,7 +119,7 @@ const ContactForm = () => {
           id="company"
           name="company"
           onChange={(e) => setCompany(e.target.value)}
-          placeholder="société"
+          placeholder="Société"
           value={company}
         />
         <input
@@ -120,7 +127,7 @@ const ContactForm = () => {
           id="phone"
           name="phone"
           onChange={(e) => setPhone(e.target.value)}
-          placeholder="téléphone"
+          placeholder="Téléphone"
           value={phone}
         />
         <div className="email-content">
@@ -131,7 +138,7 @@ const ContactForm = () => {
             name="email"
             required
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="email *"
+            placeholder="Email *"
             value={email}
           />
         </div>
@@ -139,7 +146,7 @@ const ContactForm = () => {
           id="message"
           name="message"
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="message *"
+          placeholder="Message *"
           value={message}
           required
         />
@@ -147,8 +154,8 @@ const ContactForm = () => {
       <input
         className="button hover"
         type="submit"
-        value="envoyer"
-        onClick={handleSubmit}
+        value="Envoyer"
+        onClick={(e) => handleSubmit(e)}
       />
       <div className="form-message"></div>
     </form>

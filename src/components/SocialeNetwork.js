@@ -29,7 +29,7 @@ const SocialeNetwork = () => {
                 download="Cv Julien Mulle devFront"
                 className="hover"
                 onMouseOver={anim}>
-                    <li><i class="fas fa-portrait"></i></li>
+                    <li><i className="fas fa-portrait"></i></li>
                 </a>
                 <a href="www.linkedin.com/in/julien-mulle" 
                 target="_blank"
