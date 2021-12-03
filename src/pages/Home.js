@@ -43,6 +43,7 @@ const Home = () => {
             <div className="home-main">
                 <div className="main-content">
                 <h1> Julien Mulle</h1>
+                <h2>Developpeur Web Front-End</h2>
                 <h2><DynamicText /></h2>
                 </div>
             </div>
