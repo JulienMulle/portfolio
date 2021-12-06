@@ -45,7 +45,7 @@ const Home = () => {
                 <h2>Hello, je suis </h2>
                 <h1> Julien Mulle</h1>
                 <h2>Developpeur Front-End</h2>
-                <h2><DynamicText /></h2>
+                {/*<h2><DynamicText /></h2>*/}
                 </div>
             </div>
             <ButtonsBottom  right={"/projet-1"}/>
