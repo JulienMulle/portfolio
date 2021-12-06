@@ -13,6 +13,8 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "sass": "^1.44.0",
+    "sass-loader": "^12.3.0",
     "websocket-extensions": "^0.1.4"
   },
   "scripts": {
@@ -35,8 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "node-sass": "^5.0.0"
   }
 }
