@@ -5,7 +5,7 @@ export const projectsData = [
     date: "Octobre 2021",
     languages: ["React Native","expo", "axios", "openweathermap"],
     infos:
-      "Premiere application mobile avec React Native, et utilisation de l'api openweathermap.org ",
+      "Premiere application mobile avec React Native et utilisation de l'api openweathermap.org, elle permet de voir qu'elle temps il fait.  ",
     img: "./assets/img/weatherApp.jpg",
     link: "https://github.com/JulienMulle/weather-app",
   },
@@ -25,7 +25,7 @@ export const projectsData = [
     date: "Novembre 2021",
     languages: ["React Native", "Axios", "Api ThemovieDB"],
     infos:
-      "Egalement en React Native, plus travaillé que Weather-app, avec l'api ThemovieDB et sans expo ",
+      " Application de recherche de film avec l'api ThemovieDB, on selectionne un film qui nous envoie vers le descriptif du film et qui permet de voir de la bande annonce. Egalement en React Native mais en natif. ",
     img: "./assets/img/MovieSearch.jpg",
     link: "https://github.com/JulienMulle/MovieSearch",
   },
@@ -35,7 +35,7 @@ export const projectsData = [
     date: "Octobre 2021",
     languages: ["React Native","expo", "Axios", "React Redux", "Api spoonacular"],
     infos:
-      "Seconde app avec les recettes issue de l'api de spoonacular, et selection des ingredients pour alimenter une todolist.",
+      "Seconde app avec les recettes issue de l'api de spoonacular. Elle permet de trouver une recette, voir son descripetif offre une  et selection des ingredients pour alimenter une liste de course.",
     img: "./assets/img/appRecipes.jpg",
     link: "https://github.com/JulienMulle/appRecipes",
   },

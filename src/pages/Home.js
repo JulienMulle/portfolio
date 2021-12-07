@@ -46,7 +46,7 @@ const Home = () => {
                 <h2>Developpeur Front-End</h2>
                 </div>
             </div>
-            <ButtonsBottom  right={"/projet-1"}/>
+            <ButtonsBottom  right={"/Weather-app"}/>
             </motion.div>
         </main>
     )

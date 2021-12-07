@@ -31,14 +31,14 @@ const SocialeNetwork = () => {
                 onMouseOver={anim}>
                     <li><i className="fas fa-portrait"></i></li>
                 </a>
-                <a href="www.linkedin.com/in/julien-mulle" 
+                <a href="https://www.linkedin.com/in/julien-mulle/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover"
                 onMouseOver={anim}>
                    <li><i className="fab fa-linkedin"></i></li>
                 </a>
-                <a href="https://github.com/Julien-Mulle" 
+                <a href="https://github.com/JulienMulle" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover"

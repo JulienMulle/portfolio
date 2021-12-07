@@ -13,7 +13,7 @@ export const Project1 = () => {
                 <Navigation />
                 <Projet projectNumber={0} />
                 
-                <ButtonsBottom left={'/'} right={'/projet-2'} />
+                <ButtonsBottom left={'/'} right={'/Porfolio'} />
             </div>
         </main>
     )
@@ -26,7 +26,7 @@ export const Project2 = () => {
                 <Mouse />
                 <Navigation />
                 <Projet projectNumber={1} />
-                <ButtonsBottom left={'/projet-1'} right={'/projet-3'} />
+                <ButtonsBottom left={'/Weather-app'} right={'/MovieSearch'} />
             </div>
         </main>
     )
@@ -38,7 +38,7 @@ export const Project3 = () => {
                 <Mouse />
                 <Navigation />
                 <Projet projectNumber={2} />
-                <ButtonsBottom left={'/projet-2'} right={'/projet-4'} />
+                <ButtonsBottom left={'/Porfolio'} right={'/AppRecipes'} />
             </div>
         </main>
     )
@@ -51,7 +51,7 @@ export const Project4 = () => {
                 <Mouse />
                 <Navigation />
                 <Projet projectNumber={3} />
-                <ButtonsBottom left={'/projet-3'} right={'/contact'} />
+                <ButtonsBottom left={'/MovieSearch'} right={'/Contact'} />
             </div>
         </main>
     )

@@ -32,26 +32,26 @@ import { AnimatePresence } from 'framer-motion';
           case url:
             if (e.wheelDeltaY < 0){
               setTimeout(()=>{
-                history.push('projet-1')
+                history.push('Weather-app')
               }, 500);     
           }
             break;
-          case url +"projet-1":
-            wheelRouter('projet-2', '');
+          case url +"Weather-app":
+            wheelRouter('Porfolio', '');
             break;
-          case url +"projet-2":
-             wheelRouter('projet-3', 'projet-1');
+          case url +"Porfolio":
+             wheelRouter('MovieSearch', 'Weather-app');
             break;
-          case url +"projet-3":
-            wheelRouter('projet-4', 'projet-2');
+          case url +"MovieSearch":
+            wheelRouter('AppRecipes', 'Porfolio');
             break;
-          case url +"projet-4":
-            wheelRouter('contact', 'projet-3');
+          case url +"AppRecipes":
+            wheelRouter('Contact', 'MovieSearch');
             break;
-          case url +"contact":
+          case url +"Contact":
             if(e.wheelDeltaY > 0){
               setTimeout(()=>{
-                history.push('projet-4')
+                history.push('AppRecipes')
               }, 500);
             }  
             break;
@@ -67,11 +67,11 @@ import { AnimatePresence } from 'framer-motion';
      <AnimatePresence>
      <Switch location={location} key={location.pathname}>
        <Route exact path="/" component={Home}/>
-       <Route exact path="/projet-1" component={Project1} />
-       <Route exact path="/projet-2" component={Project2} />
-       <Route exact path="/projet-3" component={Project3} />
-       <Route exact path="/projet-4" component={Project4} />
-       <Route exact path="/contact" component={Contact} />
+       <Route exact path="/Weather-app" component={Project1} />
+       <Route exact path="/Porfolio" component={Project2} />
+       <Route exact path="/MovieSearch" component={Project3} />
+       <Route exact path="/AppRecipes" component={Project4} />
+       <Route exact path="/Contact" component={Contact} />
        <Redirect to="/" /> 
      </Switch>
      </AnimatePresence>

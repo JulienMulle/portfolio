@@ -13,29 +13,29 @@ const Navigation = () => {
                 <li className="nav-portfolio">
                     Portfolio
                     <ul className="nav-projects">
-                        <NavLink to="/projet-1" 
+                        <NavLink to="/Weather-app" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>projet 1</li>
+                            <li>Weather-app</li>
                         </NavLink>
-                        <NavLink to="/projet-2" 
+                        <NavLink to="/Porfolio" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>projet 2</li>
+                            <li>Porfolio</li>
                         </NavLink>
-                        <NavLink to="/projet-3" 
+                        <NavLink to="/MovieSearch" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>projet 3</li>
+                            <li>MovieSearch</li>
                         </NavLink>
-                        <NavLink to="/projet-4" 
+                        <NavLink to="/AppRecipes" 
                         activeClassName="nav-active" 
                         className="hover">
-                            <li>projet 4</li>
+                            <li>AppRecipes</li>
                         </NavLink>
                     </ul>
                 </li>
-                <NavLink to="/contact" 
+                <NavLink to="/Contact" 
                 activeClassName="nav-active"
                 className=" hover" 
                 >
